@@ -46,9 +46,9 @@ To run the application locally, follow these steps:
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](Templates/Enter details.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](Templates/Predicted price.png)
 
 
 ## Important Notes
