@@ -46,9 +46,9 @@ To run the application locally, follow these steps:
 
 ## Screenshots
 
-![Templates/Enter details.png](Templates/Enter details.png)
+![Enter details](https://github.com/munaf101/Car-Price-Prediction/assets/105988451/04114795-2eb7-473f-9074-9be8774accb4)
+![Predicted price](https://github.com/munaf101/Car-Price-Prediction/assets/105988451/b1a39c0e-d7db-4661-b9f2-95aac2b52b0e)
 
-![Templates/Predicted price.png](Templates/Predicted price.png)
 
 
 ## Important Notes
