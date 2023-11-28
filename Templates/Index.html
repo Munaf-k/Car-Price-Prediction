@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selling Price Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .rounded {
+            border-radius: 15px;
+        }
+
+        .shadow {
+            box-shadow: 0px 0px 15px 0px #000000;
+        }
+
+        h2 {
+            color: #343a40;
+        }
+
+        .btn-dark {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <form action="{{ url_for('predict')}}" method="post" id="form" class="bg-light p-4 rounded shadow">
+            <h2 class="text-center mb-4">Car Selling Price Prediction</h2>
+
+            <div class="form-group">
+    <label for="year">Year</label>
+    <select id="year" name="year" class="form-control" required>
+        {% for year in range(2023, 1990, -1) %}
+            <option value="{{ year }}">{{ year }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+
+            <div class="form-group">
+                <label for="second">What is the Showroom Price? (In lakhs)</label>
+                <input id="second" name="Present_Price" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="third">How Many Kilometers Driven?</label>
+                <input id="third" name="Kms_Driven" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fourth">How much owners previously had the car (0 or 1 or 3)?</label>
+                <input id="fourth" name="Owner" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fuel">What Is the Fuel type?</label>
+                <select name="Fuel_Type_Petrol" id="fuel" class="form-control" required>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="resea">Are you A Dealer or Individual?</label>
+                <select name="Seller_Type_Individual" id="resea" class="form-control" required>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Individual">Individual</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="research">Transmission type</label>
+                <select name="Transmission_Mannual" id="research" class="form-control" required>
+                    <option value="Mannual">Manual Car</option>
+                    <option value="Automatic">Automatic Car</option>
+                </select>
+            </div>
+
+            <button id="sub" type="submit" class="btn btn-dark btn-block mt-3">Calculate the Selling Price</button>
+
+            <div class="mt-3">
+    <h5>{{ prediction_texts }}</h5>
+</div>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
