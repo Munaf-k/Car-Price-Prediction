@@ -46,9 +46,9 @@ To run the application locally, follow these steps:
 
 ## Screenshots
 
-![App Screenshot](Templates/Enter details.png)
+![Templates/Enter details.png](Templates/Enter details.png)
 
-![App Screenshot](Templates/Predicted price.png)
+![Templates/Predicted price.png](Templates/Predicted price.png)
 
 
 ## Important Notes
